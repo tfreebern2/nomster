@@ -1,5 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Bungee+Inline');
 
 body {
   background: url('/assets/old_moon.png');
@@ -15,6 +16,13 @@ h1, h2, h3, h4, h5, h6 {
   background:url('/assets/zwartevilt.png');
   border-radius: 0;
   box-shadow: 0px 1px 3px #2a2a2a;
+}
+
+.navbar-inverse .navbar-brand {
+  font-family: 'Bungee Inline', cursive;
+  font-size: 32px;
+  color: #90C3D4;
+  letter-spacing: -0.3px;
 }
 
 .booyah-box {
