@@ -48,3 +48,6 @@ gem 'will_paginate-bootstrap'
 
 # Gemfile for app forms
 gem 'simple_form'
+
+# Gemfile for user authentication
+gem 'devise', '>= 3.2.4'
