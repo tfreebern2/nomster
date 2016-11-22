@@ -41,3 +41,10 @@ gem 'spring',        group: :development
 # include Twitter Bootstrap
 gem 'bootstrap-sass', '~> 3.3.5.1'
 gem 'sprockets', '2.11.0'
+
+## Gemfile for Rails 3+, Sinatra, and Merb
+gem 'will_paginate', '~> 3.1.0'
+gem 'will_paginate-bootstrap'
+
+# Gemfile for app forms
+gem 'simple_form'
