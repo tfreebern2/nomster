@@ -8,17 +8,19 @@
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
-    <div class="item active">
-      <%= image_tag 'slider1.jpg' %>
-      <div class="carousel-caption">
-        Find the best beach sides to go!
-      </div>
-      <div class="item">
-        <%= image_tag 'slider2.jpg' %>
-        <div class="carousel-caption">
-          Looking for pizza?
-      </div>
+  <div class="item active">
+    <%= image_tag 'slider1.jpg', class: 'img-responsive' %>
+    <div class="carousel-caption">
+      Find the best beach sides
     </div>
+  </div>
+  <div class="item">
+    <%= image_tag 'slider2.jpg', class: 'img-responsive' %>
+    <div class="carousel-caption">
+      Find the best pizza places
+    </div>
+  </div>
+</div>
     
   <!-- Controls -->
   <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
