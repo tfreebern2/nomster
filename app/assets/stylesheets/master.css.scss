@@ -12,13 +12,25 @@ h1, h2, h3, h4, h5, h6 {
   padding:0;
 }
 
-.navbar.navbar-inverse {
+.container-fluid {
+  background:url('/assets/zwartevilt.png');
+}
+
+.navbar {
+  // something about box shadow
+  z-index:1; //or a bigger integer
+}
+
+.navbar.navbar-inverse .navbar-collapse {
   background:url('/assets/zwartevilt.png');
   border-radius: 0;
   box-shadow: 0px 1px 3px #2a2a2a;
+
 }
 
+
 .navbar-inverse .navbar-brand {
+  background:url('/assets/zwartevilt.png');
   font-family: 'Bungee Inline', cursive;
   font-size: 32px;
   color: #90C3D4;
