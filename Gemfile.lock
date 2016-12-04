@@ -290,6 +290,7 @@ DEPENDENCIES
   devise (>= 3.2.4)
   figaro (>= 1.0.0)
   fog
+  fog-aws
   geocoder (= 1.3.4)
   jbuilder (~> 2.0)
   jquery-rails

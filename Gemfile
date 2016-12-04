@@ -63,3 +63,4 @@ gem 'carrierwave', '>= 1.0.0.rc', '< 2.0'
 
 # Gemfile for Fog
 gem "fog"
+gem "fog-aws"
