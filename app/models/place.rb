@@ -10,4 +10,12 @@ class Place < ActiveRecord::Base
   validates :address, presence: true
   validates :description, length: { maximum: 500 }
 
+  def last_comment
+    self.comments.order("id ASC").last
+  end
+
+  def last_photo
+    self.photos.order("id ASC").last
+  end
+
 end
