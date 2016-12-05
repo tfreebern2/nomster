@@ -3,7 +3,7 @@
   <ol class="carousel-indicators">
     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
     <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
   </ol>
 
   <!-- Wrapper for slides -->
@@ -20,6 +20,12 @@
       Find the best pizza places
     </div>
   </div>
+  <div class="item">
+    <%= image_tag 'slider3.jpg', class: 'img-responsive' %>
+    <div class="carousel-caption">
+      Find the best bars
+    </div>
+  </div>
 </div>
     
   <!-- Controls -->
@@ -30,6 +36,7 @@
     <span class="glyphicon glyphicon-chevron-right"></span>
   </a>
 </div>
+<br />
 
 <!-- List of Places -->
 <% @places.each do |place| %>
@@ -44,10 +51,14 @@
     <% end %>
 
     <div class="clear"></div>
-
+    <br /><br />
+    
+    
     <% if place.photos.present? %>
       <%= image_tag place.last_photo.picture, class: "picture-index" %>
     <% end %> 
+    
+      
 
 <% if place.comments.present? %>
   <div class="col-xs-12">
