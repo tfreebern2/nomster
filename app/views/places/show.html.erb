@@ -4,8 +4,6 @@
   <br/><br/>
   <p><%= @place.description %><p>
 
-    
-    
   <div id="map"></div>
 
 <% if @place.latitude.present? && @place.longitude.present? %>
@@ -29,7 +27,9 @@
       </script>
 
 <% end %>
+
 <br /><br />
+
     <div class="pull-right">
       <% if current_user && current_user == @place.user %>
         <button class="btn btn-primary" data-toggle="modal" data-target="#pictureModal">
@@ -47,7 +47,6 @@
 <br />
 
 
-
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -56,23 +55,27 @@
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         <h4 class="modal-title" id="myModalLabel">Add a comment</h4>
       </div>
+
         <%= simple_form_for @comment, url: place_comments_path(@place) do |f| %>
 
         <div class="modal-body">
           <%= f.input :message %>
           <%= f.input :rating, as: :select, collection: Comment::RATINGS %>
         </div>
+
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           <%= f.submit "Add a Comment", class: 'btn btn-primary' %>
         </div>
         <% end %>
-      </div>
     </div>
   </div>
+</div>
+
 <br />
+
 <div class="col-xs-10 col-xs-offset-1">
-<h1 class="pull-left">Comments</h1>
+<h1 class="pull-left"><strong>Comments</strong></h1>
 <!-- Button trigger modal -->
 <button class="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#myModal">
   Add a comment
@@ -93,6 +96,7 @@
     </blockquote>
   </div>
 <% end %>
+
 </div>
 
 <!-- Picture Modal -->
@@ -111,12 +115,12 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <%= f.submit "Add a Caption", class: 'btn btn-primary' %>
+          <%= f.submit "Submit", class: 'btn btn-primary' %>
         </div>
           <% end %>
-        </div>
-      </div>
     </div>
+  </div>
+</div>
 
 <div class="clear"></div>
 
@@ -131,6 +135,7 @@
 
 <% @place.photos.each do |photo| %>
   <div class="booyah-box col-xs-10 col-xs-offset-1">
+  <br /><br />
       <%= image_tag photo.picture, class: "picture" %>
       <div class="clear"></div>
       <br />
@@ -141,9 +146,7 @@
 <% end %>
 
 <div class="clear"></div>
+
 <br />
-
-
-
 
 <!-- Picture modal end -->
